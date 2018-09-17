@@ -4,7 +4,7 @@ module.exports.run = async (Discord, client, message, args) => {
     roll();
 
 		if (randnum){
-			message.reply("t'as fait " + randnum + " !");
+			message.reply("you got " + randnum + " !");
 			console.log("dé1");
 		}
 
