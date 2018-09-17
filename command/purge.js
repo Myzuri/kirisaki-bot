@@ -1,7 +1,6 @@
 module.exports.run = async (Discord, client, message, args) =>  {
 
 
-	if (message.channel.type == 'dm') return message.reply('Cannot purge our dm');
 	if (message.channel.type == 'text') {
         message.channel.fetchMessages()
           .then(messages => {
