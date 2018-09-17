@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 const streamOptions = {seek: 0, volume: 1};
 const config = require('./modules/config.json')
-const ownerID = "446738422346809354";
 const active = new Map();
 
 var prefix = (config.prefix);
