@@ -47,10 +47,6 @@ const command = args.shift().toLowerCase();
 const username = message.author.username;
 
 
-let ops = {
-    ownerID: ownerID,
-    active: active
-}
 
 
     if(message.author.bot) return
