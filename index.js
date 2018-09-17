@@ -54,7 +54,7 @@ const username = message.author.username;
 
     try {
         let commandFile = require(`./command/${command}.js`);
-        commandFile.run(Discord, client, message, args, ytdl, streamOptions, ops, username)
+        commandFile.run(Discord, client, message, args, ytdl, streamOptions, username)
     } catch (err) {
         return 
     }
