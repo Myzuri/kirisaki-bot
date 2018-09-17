@@ -30,16 +30,16 @@ client.on("guildCreate", guild => {
 
 client.on('guildMemberAdd', member => {
    // const defaultChannel = member.guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-   member.guild.channels.get('489432171547852800').send("Welcome <@" + member.id + ">"); 
+   member.guild.channels.get('').send("Welcome <@" + member.id + ">"); 
 });
 //`${prefix}help for help`
 
 client.on("guildMemberRemove", (member) => {
     //const defaultChannel = member.guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-    member.guild.channels.get('489432171547852800').send("Bye **" + member.user.username + '**');
+    member.guild.channels.get('').send("Bye **" + member.user.username + '**');
 });
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);
 
 client.on('message', message => {
 var msg = message.content.toLowerCase();
