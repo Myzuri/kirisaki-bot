@@ -1,6 +1,7 @@
 module.exports.run = async (Discord, client, message, args) =>  {
 
 
+
 	if (message.channel.type == 'text') {
         message.channel.fetchMessages()
           .then(messages => {
