@@ -2,7 +2,7 @@ module.exports.run = async (Discord, client, message, args) =>  {
 
 
 
-  const user = (msg.mentions.users.first() || bot.users.get(args[0]) || null);
+  const user = (msg.mentions.users.first() || client.users.get(args[0]) || null);
   const amount = !!user ? parseInt(msg.content.split(" ")[2], 10) : parseInt(msg.content.split(" ")[1], 10);
   if (!amount) return msg.edit("Must specify an amount to delete!").then(msg.delete(2000));
   if (!amount && !user) return msg.edit("Must specify a user and amount, or just an amount, of messages to purge!").then(msg.delete(2000));
@@ -10,7 +10,7 @@ module.exports.run = async (Discord, client, message, args) =>  {
   let messages = await msg.channel.messages.fetch({limit: 100});
   if(user) {
     messages = messages.array().filter(m=>m.author.id === user.id);
-    bot.log("log", "Purge Amount", msg.author, "Amount: " + amount);
+    client.log("log", "Purge Amount", msg.author, "Amount: " + amount);
     messages.length = amount;
   } else {
     messages = messages.array();
