@@ -1,1 +1,9 @@
 # Bot-vps
+
+A bêta version of a bot so there's many bugs and edit every day, wich are resolve as fast as possible
+
+When the bot gonna be ready this repo gonna be in free access, and new repo will be create wich will be update sometimes cause the bugs would (hope) less present thanks comprehension
+
+If you want to help or another things just dm me 
+
+Yu#7232 (won't change)
