@@ -8,9 +8,9 @@ if(message.author.id !== '446738422346809354') //make the bot reply only to the 
   let startUsage = process.cpuUsage()
   
   setTimeout(() => {
-    // spin the CPU for 500 milliseconds
+    // spin the CPU for 1000 milliseconds
     var now = Date.now()
-    while (Date.now() - now < 500);
+    while (Date.now() - now < 1000);
   
     const newTime = process.hrtime();
     const newUsage = process.cpuUsage();
@@ -29,12 +29,20 @@ if(message.author.id !== '446738422346809354') //make the bot reply only to the 
     console.log('elapsed time ms:  ', elapTimeMS)
     console.log('elapsed user ms:  ', elapUserMS)
     console.log('elapsed system ms:', elapSystMS)
-    console.log('cpu percent:      ', cpuPercent, '\n')
+    console.log('cpu percent:      ', cpuPercent)
+    
+    let embed = new Discord.RichEmbed()
+    
+    .setColor('RANDOM')
+    .addField('elapsed time ms: ', elapTimeMS, True)
+    .addField('cpu percent:  ', cpuPercent, True)
+    return message.channel.send(embed);
   
   }, 1000);
   
   function hrtimeToMS (hrtime) {
     return hrtime[0] * 1000 + hrtime[1] / 1000000
   }
-  
+  //in case setTimeout can be replace by setInterval but make sure the bot won't send messages 
+  //cause it will refresh the cpu every 1000 millisecond
   }
