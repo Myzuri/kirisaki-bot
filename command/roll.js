@@ -3,12 +3,8 @@ module.exports.run = async (Discord, client, message, args) => {
 
     roll();
 
-		if (randnum<100){
+		if (randnum){
 			message.reply("you got " + randnum + " !");
-
-		} else {
-			message.reply("Wow you got" + randnum + "!?!!...");
-
 }
 
 function roll(min, max){
