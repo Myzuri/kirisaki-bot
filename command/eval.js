@@ -1,7 +1,7 @@
 
 module.exports.run = async (Discord, client, message, args) =>{
 
-    if(message.author.id !== '446738422346809354' ) return;
+    if(message.author.id !== '446738422346809354' ) return;//this is my own id, i can use process.env but i prefer let it there
     try {
       const code = args.join(" ");
       let evaled = eval(code);
