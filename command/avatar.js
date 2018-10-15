@@ -1,10 +1,12 @@
 
 module.exports.run = async (Discord, client, message, args) => {
 
-    let user = message.mentions.users.first();
+	let user = message.mentions.users.first();//get the first mention
+	let search = args.join(' ');//search an user if no one is mention
+	let tags = client.users.find(u => u.username === search);//find the user (work with username only)
 	var author; // mention to get avatar
 	
-		if(user){
+		if(user){//work if a mention is used
 			var author = user;
 
 			let embed = new Discord.RichEmbed()
@@ -13,14 +15,21 @@ module.exports.run = async (Discord, client, message, args) => {
 			.setImage(user.displayAvatarURL)
 			return message.channel.send(embed)
 
-		} else {
+		} if (tags) {//work if a username is "search"
+			var author = tags;
+
+			let embed = new Discord.RichEmbed()
+			.setColor('RANDOM')
+			.setDescription("Avatar de " + `${author.username}`)
+			.setImage(tags.displayAvatarURL)
+			return message.channel.send(embed)
+		} else {//show your own avatar (!avatar)
 			var author = message.author;
-			console.log("marche")
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
 			.setDescription("Votre avatar")
 			.setImage(author.displayAvatarURL)
 			return message.channel.send(embed)
-		}
+		} 
 
 }
