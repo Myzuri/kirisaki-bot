@@ -23,8 +23,10 @@ module.exports.run = async (Discord, client, message, args) => {
 			.setDescription("Avatar de " + `${author.username}`)
 			.setImage(tags.displayAvatarURL)
 			return message.channel.send(embed)
+			
 		} else {//show your own avatar (!avatar)
 			var author = message.author;
+			
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
 			.setDescription("Votre avatar")
