@@ -16,3 +16,5 @@ module.exports.run = async (Discord, client, message, args) =>{
         n++;
 }
 }
+//I'm working on an other option, it will be var test = client.guilds.map(g => g.name).join(', ') 
+// Actually it work with the eval command so you can already use it right now
