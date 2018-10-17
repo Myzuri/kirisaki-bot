@@ -1,4 +1,4 @@
-# Bot-vps
+# Bot tutorial
 
 A bêta version of a bot so there's many bugs and edit every day, wich are resolve as fast as possible
 
