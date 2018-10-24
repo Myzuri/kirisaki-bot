@@ -20,7 +20,7 @@ module.exports.run = async (Discord, client, message, args) => {
 
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setDescription("`${author.tag}'s avatar`)
+			.setDescription(`${author.tag}'s avatar`)
 			.setImage(tags.displayAvatarURL)
 			return message.channel.send(embed)
 			
