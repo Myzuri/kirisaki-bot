@@ -13,6 +13,7 @@ client.on('ready', () => {
     client.user.setPresence({ game : { name : `${client.guilds.size} servers`, url : 'https://www.twitch.tv/monstercat'}});
     //client.user.setPresence({ game : { name : 'Access denied', url : 'https://www.twitch.tv/monstercat'}})
     console.log('connexion successful')
+    console.log(`Logged as ${client.user.tag}`)//It's usefull when you have many bot bots and you don't know wich is getting online
 });
 
 client.on("guildCreate", guild => {
