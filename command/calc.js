@@ -1,5 +1,5 @@
-const math = require('mathjs')
-module.exports.run = async (Discord, client, message, args) => {
+
+module.exports.run = async (Discord, client, message, args, math) => {
 
 	let calcul = args.join(' ');
 try{
