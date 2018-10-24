@@ -4,6 +4,7 @@ const ytdl = require('ytdl-core');
 const streamOptions = {seek: 0, volume: 1};
 const config = require('./modules/config.json')
 const active = new Map();
+const math = require('mathjs')
 
 var prefix = (config.prefix);
 
@@ -45,9 +46,6 @@ client.on('message', message => {
 var msg = message.content.toLowerCase();
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-const username = message.author.username;
-
-
 
 
     if(message.author.bot) return
@@ -55,7 +53,7 @@ const username = message.author.username;
 
     try {
         let commandFile = require(`./command/${command}.js`);
-        commandFile.run(Discord, client, message, args, ytdl, streamOptions, username)
+        commandFile.run(Discord, client, message, args, ytdl, streamOptions, math)
     } catch (err) {
         return 
     }
