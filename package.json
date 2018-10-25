@@ -1,5 +1,5 @@
 {
-  "name": "bot",
+  "name": "Yu-bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Yu",
   "license": "ISC",
   "dependencies": {
+    "ascii-art": "^1.4.4",
     "discord.js": "^11.4.2",
     "ffmpeg": "0.0.4",
     "mathjs": "^5.2.2",
