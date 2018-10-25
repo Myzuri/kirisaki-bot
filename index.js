@@ -4,7 +4,6 @@ const ytdl = require('ytdl-core');
 const streamOptions = {seek: 0, volume: 1};
 const config = require('./modules/config.json')
 const active = new Map();
-const math = require('mathjs')
 
 var prefix = (config.prefix);
 
@@ -53,7 +52,7 @@ const command = args.shift().toLowerCase();
 
     try {
         let commandFile = require(`./command/${command}.js`);
-        commandFile.run(Discord, client, message, args, ytdl, streamOptions, math)
+        commandFile.run(Discord, client, message, args, ytdl, streamOptions)
     } catch (err) {
         return 
     }
