@@ -45,6 +45,11 @@ client.on("guildMemberRemove", (member) => {
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
+    if(message.content === '<@470543502548402186>') 
+        return message.channel.send(`My prefix is \`${config.prefix}\`, Baka !` )
+})
+
+client.on('message', message => {
 var msg = message.content.toLowerCase();
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
