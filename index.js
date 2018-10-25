@@ -10,13 +10,12 @@ var prefix = (config.prefix);
 console.log('connexion.....')
 
 client.on('ready', () => {
-    client.on('ready', () => {
     setInterval(function() {
-    let allgame = ['Raku wa baka desu', `My prefix ${config.prefix} | serving ${client.guilds.size} servers`, 'OwO']
+    let allgame = ['Raku wa baka desu', `My prefix ${config.prefix} | serving ${client.guilds.size} servers`, 'OwO', `${client.users.size} users <3`]
     let gameon = allgame[Math.floor(Math.random()*allgame.length)]
     client.user.setGame(gameon, 'https://www.twitch.tv/monstercat');
-}, 100000)
-    console.log('connexion successful')
+}, 20000)
+    console.log('connexion terminée')
     console.log(`Logged as ${client.user.tag}`)//It's usefull when you have many bot bots and you don't know wich is getting online
 });
 
