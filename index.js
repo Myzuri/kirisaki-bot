@@ -12,7 +12,7 @@ console.log('connexion.....')
 client.on('ready', () => {
     client.on('ready', () => {
     setInterval(function() {
-    let allgame = ['Raku wa baka desu', `My prefix \`${config.prefix}\` | serving ${client.guilds.size} servers`, 'OwO']
+    let allgame = ['Raku wa baka desu', `My prefix ${config.prefix} | serving ${client.guilds.size} servers`, 'OwO']
     let gameon = allgame[Math.floor(Math.random()*allgame.length)]
     client.user.setGame(gameon, 'https://www.twitch.tv/monstercat');
 }, 100000)
