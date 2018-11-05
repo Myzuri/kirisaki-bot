@@ -2,6 +2,9 @@ const math = require('mathjs')
 module.exports.run = async (Discord, client, message, args) => {
 
 	let calcul = args.join(' ');
+	
+if (!calcul){ return message.channel.send('```!calc 1+1 | or other```')
+	    } else {
 try{
 	let mathc = math.eval(calcul);
 
@@ -15,5 +18,5 @@ try{
 } catch (error) {
 	message.channel.send("It won't work")
 }
-
+}
 }
