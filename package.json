@@ -12,6 +12,7 @@
     "ascii-art": "^1.4.4",
     "discord.js": "^11.4.2",
     "ffmpeg": "0.0.4",
+    "ffmpeg-binaries": "^4.0.0",
     "mathjs": "^5.2.2",
     "moment": "^2.22.2",
     "nekos.life": "^1.1.4",
