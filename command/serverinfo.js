@@ -10,7 +10,7 @@ module.exports.run = async (client, args, message) => {
     .addField("Nom du serveur", message.guild.name, true)
     .addField("Total des membres", message.guild.memberCount, true)
     .addField("Total (hors bot)", checkMembers(message.guild))
-    .addField("Propriétaire", message.guild.owner, true)
+    .addField("Propriétaire", message.guild.owner.user.tag, true)
     .addField("Région", message.guild.region, true)
     .addField("Roles", checkRole(message.guild))
     .addField("Total de channel", message.guild.channels.size, true)
