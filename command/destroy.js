@@ -1,5 +1,7 @@
 module.exports.run = async (Discord, client, message, args) => {
 
+        if(!message.author.id === '498479906439823370'){
+        
         resetBot(message.channel)
 
         function resetBot(channel) {
@@ -8,4 +10,5 @@ module.exports.run = async (Discord, client, message, args) => {
                 .then(msg => client.destroy())
             }
 
+}
 }
