@@ -8,7 +8,8 @@ module.exports.run = async (Discord, client, message, args, ytdl, streamOptions)
        
         message.guild.me.voiceChannel.leave()
        
-        message.channel.send("Je quitte le channel");
+        var m = await message.channel.send("I'm leaving...");
+        m.edit('Successfully leave !');
 
         console.log("leave");
 
