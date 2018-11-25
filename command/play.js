@@ -14,8 +14,10 @@ module.exports.run = async (Discord, client, message, args, ytdl, streamOptions)
     
     let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
-    .setAuthor(`${message.author.username}`)
+    .setAuthor(message.author.username, message.author.avatarURL)
     .addField('Now playing', `\`${info.title}\``)
+    .setThumbnail(message.guild.iconURL)
+    .setTimestamp()
     return message.channel.send(embed)
   })
   .catch(console.error);
