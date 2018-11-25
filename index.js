@@ -45,8 +45,8 @@ client.on("guildMemberRemove", (member) => {
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
-    if(message.content === '<@382594034830540800>') 
-        return message.channel.send(`My prefix is \`${config.prefix}\`, Baka !` )
+    if(message.content === `<@${client.user.id>`) 
+        return message.channel.send(`My prefix is \`${config.prefix}\`, Baka !` )//the bot will say his prefix 
 })
 
 client.on('message', message => {
