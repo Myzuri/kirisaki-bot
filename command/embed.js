@@ -2,6 +2,8 @@ module.exports.run = async (Discord, client, message, args) => {
 
         var content = args.join(' ');//need to catch the args that the bot will send
 
+        if(!content || args[0] === 'help') return message.channel.send('```!embed (your message) | send an embed message```')
+        
         let userembed = new Discord.RichEmbed()
 
         .setColor('RANDOM')//a random color | you can use the HEX color if random isn't at your taste
