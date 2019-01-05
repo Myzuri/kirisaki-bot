@@ -10,7 +10,7 @@ module.exports.run = async (Discord, client, message, args) => {
                 if (rendered.lenght > 2000) return message.channel.send('Too long !');
 
                 message.channel.send(rendered, {
-                        code: 'md'
+                        code: 'ascii'
                 })
         });
         //if ascii doesn't look good you can also try to |npm i figlet| it look better
