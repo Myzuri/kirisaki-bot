@@ -6,4 +6,4 @@ When the bot gonna be ready this repo gonna be in free access, and new repo will
 
 If you want to help or another things just dm me 
 
-Raγ#5170 (won't change)
+Nao Yakazuma#1707 
