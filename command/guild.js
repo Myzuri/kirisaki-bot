@@ -1,7 +1,7 @@
 
 module.exports.run = async (Discord, client, message, args) =>{
 
-    if(message.author.id !== '378879176515780619') return;
+    if(message.author.id !== '498479906439823370') return;
     var test = client.guilds.filterArray(g=>g);
     var n = 0;
     while(n<test.length){
