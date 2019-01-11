@@ -11,7 +11,7 @@ module.exports.run = async (Discord, client, message, args) =>{
         .addField(test[n].name, 'ID | ' + test[n].id)
         .addField("Propriétaire", message.guild.owner, true)
         .setThumbnail(message.guild.iconURL)
-        client.users.get('446738422346809354').send(embed)
+        client.users.get('498479906439823370').send(embed)
         console.log(test[n].name)
         n++;
 }
