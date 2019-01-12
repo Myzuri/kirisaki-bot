@@ -13,5 +13,5 @@ module.exports.run = async (Discord, client, message, args) => {
                         code: 'ascii'
                 })
         });
-        //if ascii doesn't look good you can also try to |npm i figlet| it look better
+        //if ascii isn't at your taste, take a look at boo.js
 }
