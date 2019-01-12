@@ -2,7 +2,7 @@ module.exports.run = async (Discord, client, message, args) =>  {
 
   var msglength = args[0];
 
-//  if(!message.member.hasPermissions('MANAGE_MESSAGES')) return message.channel.sendMessage("You don't have enough perms")
+  if(!message.member.hasPermissions('MANAGE_MESSAGES')) return message.channel.sendMessage("You don't have enough perms")
 
 
 	if (message.channel.type == 'text') {
