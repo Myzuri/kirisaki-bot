@@ -4,18 +4,18 @@ module.exports.run = async (client, args, message) => {
 
 
     let sembed = new Discord.RichEmbed()
-    .setDescription("Voici les infos du serveur "  + `${message.author.username}`)
+    .setDescription("Here the server info "  + `${message.author.username}`)
     .setColor('RANDOM')
     .setThumbnail(message.guild.iconURL)
-    .addField("Nom du serveur", message.guild.name, true)
-    .addField("Total des membres", message.guild.memberCount, true)
-    .addField("Total (hors bot)", checkMembers(message.guild))
-    .addField("Propriétaire", message.guild.owner.user.tag, true)
-    .addField("Région", message.guild.region, true)
+    .addField("Server name", message.guild.name, true)
+    .addField("Total members", message.guild.memberCount, true)
+    .addField("Total (without bot)", checkMembers(message.guild))
+    .addField("Owner", message.guild.owner.user.tag, true)
+    .addField("Server region", message.guild.region, true)
     .addField("Roles", checkRole(message.guild))
-    .addField("Total de channel", message.guild.channels.size, true)
-    .addField("ID du serveur", message.guild.id, true)
-    .setFooter("Serveur créer le:")
+    .addField("Channel number", message.guild.channels.size, true)
+    .addField("Server ID", message.guild.id, true)
+    .setFooter("Server created at:")
     .setTimestamp(message.guild.createdAt);
     return message.channel.send(sembed);
 
