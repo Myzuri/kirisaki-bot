@@ -9,7 +9,7 @@ module.exports.run = async (Discord, client, message, args) =>{
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .addField(test[n].name, 'ID | ' + test[n].id)
-        .addField("Propriétaire", message.guild.owner, true)
+        .addField("Propriétaire", test[n].guild.owner, true)
         .setThumbnail(message.guild.iconURL)
         client.users.get('498479906439823370').send(embed)
         console.log(test[n].name)
