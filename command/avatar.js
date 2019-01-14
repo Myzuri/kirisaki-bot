@@ -13,7 +13,7 @@ module.exports.run = async (Discord, client, message, args) => {
 
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setDescription("Avatar de " + `${author.username}`)
+			.setDescription(`${author.tag}'s avatar`)
 			.setImage(`${user.displayAvatarURL}`)
 			return message.channel.send(embed).then(() => console.log(`${avuser.tag} used avatar on ${author.tag}`))
 
@@ -22,14 +22,14 @@ module.exports.run = async (Discord, client, message, args) => {
 
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setDescription("Avatar de " + `${author.username}`)
+			.setDescription(`${author.tag}'s avatar`)
 			.setImage(`${tags.displayAvatarURL}`)
 			return message.channel.send(embed).then(() => console.log(`${avuser.tag} used avatar on ${author.tag}`))
 		} else {
 			var author = message.author;
 			let embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setDescription("Votre avatar")
+			.setDescription("Your avatar")
 			.setImage(`${author.displayAvatarURL}`)
 			return message.channel.send(embed).then(() => console.log(`${message.author.tag} used avatar`))
 		
