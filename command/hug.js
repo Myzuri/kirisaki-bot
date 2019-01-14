@@ -5,7 +5,7 @@ exports.run = async (Discord, client, message, args) => {
 
     let hugger = message.author;
 
-    let emote = client.emojis.get('534442737227923457')
+    let emote = client.emojis.get('534470532637130763')
 
     if(!Hugser) return message.channel.send('Trying to hug what '+emote)
 
