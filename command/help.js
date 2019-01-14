@@ -5,7 +5,7 @@ module.exports.run = async (client, args, message) => {
     let user = message.author;
     let sembed = new Discord.RichEmbed()
     .setTitle("My commands")
-    .addField('Fun', '`avatar`, `ascii`, `calc`, `ping`, `slain`, `cat`, `figle`, `say`')
+    .addField('Fun', '`avatar`, `ascii`, `calc`, `ping`, `slain`, `cat`, `boo`, `say`, `hug`, `kiss`')
     .addField('Usefull', '`userinfo`, `serverinfo`, `feedback`, `bug`')
     .setColor('RANDOM')
 
