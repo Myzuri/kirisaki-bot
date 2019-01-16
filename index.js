@@ -5,7 +5,7 @@ const streamOptions = {seek: 0, volume: 1};
 const config = require('./modules/config.json')
 const active = new Map();
 
-var prefix = (config.prefix);
+var prefix = (';');
 
 console.log('connexion.....')
 
